@@ -17,14 +17,7 @@
   .stat-value { font-size: 22px; font-weight: 800; color: #059669; }
   .stat-label { font-size: 11px; color: #9c8b78; text-transform: uppercase; letter-spacing: 0.5px; }
   .date-note { margin-left: auto; font-size: 12px; color: #7c6f5e; padding: 7px 12px; background: #f5efe3; border-radius: 6px; border: 1px solid #e8e0d0; }
-  .combined-section { margin: 24px 32px 8px; }
-  .combined-header { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: #059669; margin-bottom: 12px; }
-  .combined-card { background: #f0fdf4; border: 1px solid #10b981; border-left: 4px solid #059669; border-radius: 10px; padding: 20px; margin-bottom: 16px; }
-  .combined-title { font-size: 14px; font-weight: 800; color: #059669; margin-bottom: 10px; }
-  .post-box { background: #fff; border: 1px solid #d1fae5; border-radius: 8px; padding: 14px 16px; font-size: 13px; line-height: 1.7; color: #1a2e1a; white-space: pre-wrap; font-family: inherit; }
-  .copy-btn { margin-top: 10px; background: #059669; color: #fff; border: none; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; }
-  .copy-btn:hover { opacity: 0.85; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 20px; padding: 8px 32px 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 20px; padding: 24px 32px; }
   .card { background: #fdfaf5; border: 1px solid #e8e0d0; border-left: 4px solid #059669; border-radius: 10px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: transform 0.15s, box-shadow 0.15s; }
   .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
   .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
@@ -36,19 +29,15 @@
   .source-link { color: #0093d3; text-decoration: none; font-weight: 600; }
   .source-link:hover { color: #059669; }
   .platform-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; color: #0069a8; margin: 14px 0 6px; }
-  .platform-label.meta { color: #1877f2; }
   .post-draft { background: #f0f7ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 12px 14px; font-size: 12px; line-height: 1.7; color: #1e3a5f; white-space: pre-wrap; font-family: inherit; }
-  .post-draft.meta { background: #f0f4ff; border-color: #c7d2fe; color: #1e2a5f; }
   .copy-btn-small { margin-top: 8px; background: #0093d3; color: #fff; border: none; padding: 5px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; display: inline-block; }
-  .copy-btn-small.meta { background: #1877f2; }
   .copy-btn-small:hover { opacity: 0.85; }
-  .divider { height: 1px; background: #e8e0d0; margin: 4px 32px 20px; }
-  .section-header-bar { padding: 16px 32px 6px; display: flex; align-items: center; justify-content: space-between; }
+  .section-header-bar { padding: 8px 32px 6px; display: flex; align-items: center; justify-content: space-between; }
   .section-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: #059669; }
   .section-count { font-size: 11px; color: #9c8b78; background: #f0f0ea; padding: 2px 8px; border-radius: 10px; }
   .footer { background: #fdfaf5; border-top: 1px solid #e5e7eb; padding: 18px 32px; text-align: center; font-size: 12px; color: #9c8b78; margin-top: 8px; }
   .footer strong { color: #7c6f5e; }
-  @media (max-width: 600px) { .header, .stats-bar, .combined-section, .section-header-bar { padding-left: 16px; padding-right: 16px; } .grid { grid-template-columns: 1fr; padding: 8px 16px 24px; } }
+  @media (max-width: 600px) { .header, .stats-bar, .section-header-bar { padding-left: 16px; padding-right: 16px; } .grid { grid-template-columns: 1fr; padding: 8px 16px 24px; } }
 </style>
 </head>
 <body>
@@ -63,56 +52,14 @@
 
 <div class="stats-bar">
   <div class="stat"><div class="stat-value">13</div><div class="stat-label">Exhibitors in News</div></div>
-  <div class="stat"><div class="stat-value">27</div><div class="stat-label">Posts Ready</div></div>
+  <div class="stat"><div class="stat-value">13</div><div class="stat-label">Posts Ready</div></div>
   <div class="stat"><div class="stat-value">Thursday</div><div class="stat-label">Today</div></div>
   <div class="date-note">20 August 2026 &nbsp;|&nbsp; Past 24 Hours + Exhibitor Digest &nbsp;|&nbsp; Closed Won Exhibitors</div>
 </div>
 
-<div class="combined-section">
-  <div class="combined-header">Today's Champions Post</div>
-  <div class="combined-card">
-    <div class="combined-title">Combined LinkedIn Post - All Cleared Exhibitors</div>
-    <div class="post-box" id="combined-post">Big news from our Space-Comm 2027 exhibitors 🚀
-
-- Astroscale - Space Force Contract: Astroscale and Orbit Fab are preparing to refuel U.S.
-- BAE Systems - New Spacecraft: BAE Systems has unveiled Ascent, a new spacecraft in its Elevation line built for manoeuvring, refuelling and high-thrust propulsion.
-- Viasat - Space Force Contract: Viasat has selected Rocket Lab to build a small, manoeuvrable GEO satellite bus for the U.S.
-- Skyrora - Launch Milestone: Skyrora holds the UK's first-ever licence for a vertical rocket launch from British soil, with its Skylark L vehicle cleared to fly from SaxaVord Spaceport in Shetland.
-- GMV - New Agreement: GMV has agreed a deal with the Spanish Air and Space Force to install a satellite tracking antenna, strengthening the country's national space surveillance capabilities..
-- Open Cosmos - Earth Observation: Open Cosmos unveiled eight new Earth observation satellites at the ESA Earth Observation Commercialisation Forum, part of its push to help Europe monitor climate-related disasters and environmental threats from space..
-- Seraphim Space - Industry Recognition: Via Satellite has named Seraphim Space among its "10 Hottest Companies in Satellite for 2026," recognising the investor's portfolio performance, including ICEYE, Xona Space Systems and the $2.4bn flotation of HawkEye 360..
-- AAC Clyde Space - Financial Results: AAC Clyde Space published its Q2 2026 results on 13 August, reporting net sales up approximately 51% year-on-year and EBITDA turning positive, with a backlog approaching 1.2 billion SEK..
-- OHB SE - Contract Win: OHB posted strong H1 2026 growth, with adjusted EBITDA up more than 30% year-on-year, helped by a EUR 248 million ESA contract awarded in March for the EUMETSAT Polar System-Sterna weather satellite mission..
-- EnduroSat - Milestone: EnduroSat has passed 100 satellites deployed to orbit, hitting the milestone in July with 10 satellites launched aboard SpaceX's Transporter-17 mission from Vandenberg Space Force Base..
-- Teledyne - New Division: Teledyne has formed a new Teledyne Space division, bringing together its space-focused imaging, microwave and photonics businesses, and secured a contract to deliver near-infrared detector arrays for the Lazuli Space Observatory..
-- Filtronic - Record Contract: Filtronic has expanded its strategic agreement with SpaceX, securing its largest-ever order worth approximately £47.3m for E-band Gallium Nitride power amplifiers that will fly on the Starlink constellation..
-- Nammo - Lunar Mission: Nammo has been selected to develop a rocket motor for the HERACLES Moon mission, a joint ESA/JAXA/CSA lunar sample-return programme..
-
-Thirteen exhibitors, one very busy fortnight in space. Proud to have all of them on the show floor at Space-Comm Expo Europe 2027.
-
-#SpaceComm2027 #SpaceIndustry #UKSpace #NewSpace
-
-Astroscale: https://www.space.com/space-exploration/satellites/private-probe-will-refuel-space-force-satellites-high-above-earth-on-landmark-2026-mission
-BAE Systems: https://spacenews.com/bae-systems-introduces-ascent-spacecraft-to-support-space-superiority-and-exploration/
-Viasat: https://www.globenewswire.com/news-release/2026/08/17/3346048/0/en/viasat-selects-rocket-lab-to-build-geo-satellite-for-u-s-space-force-s-protected-tactical-satcom-global-program.html
-Skyrora: https://spacenews.com/skyrora-gets-uk-launch-license-as-first-flight-likely-slips-to-2026/
-GMV: https://www.gmv.com/en/communication/press-room/press-releases/space/spanish-air-space-force-gmv-agree-install-satellite
-Open Cosmos: https://www.advanced-television.com/2026/05/12/open-cosmos-builds-new-eo-satellites/
-Seraphim Space: https://seraphim.vc/news/seraphim-space-10-hottest-satellite-companies-2026/
-AAC Clyde Space: https://www.investing.com/news/transcripts/earnings-call-transcript-aac-clyde-space-posts-strong-q2-2026-growth-93CH-4856997
-OHB SE: https://satnews.com/2026/03/23/ohb-se-exceeds-profitability-targets-with-record-e3-2-billion-backlog/
-EnduroSat: https://www.endurosat.com/news/endurosat-has-passed-100-satellites-deployed-to-orbit/
-Teledyne: https://www.stocktitan.net/news/TDY/teledyne-strengthens-commitment-to-the-space-wwgp68v9s5bj.html
-Filtronic: https://filtronic.com/news-events/news/filtronic-secures-further-order-strengthening-strategic-partnership-with-spacex-for-starlink/
-Nammo: https://www.nammo.com/story/nammo-to-develop-rocket-motor-for-heracles-moon-mission/</div>
-    <button class="copy-btn" onclick="copyText('combined-post')">Copy combined post</button>
-  </div>
-</div>
-
-<div class="divider"></div>
 <div class="section-header-bar">
   <span class="section-label">&#127942; Individual Exhibitor Posts</span>
-  <span class="section-count">LinkedIn + Meta drafts</span>
+  <span class="section-count">LinkedIn drafts</span>
 </div>
 <div class="grid">
 
@@ -133,14 +80,6 @@ Proud to have Astroscale exhibiting at Space-Comm Expo Europe 2027.
 
 https://www.space.com/space-exploration/satellites/private-probe-will-refuel-space-force-satellites-high-above-earth-on-landmark-2026-mission</div>
     <button class="copy-btn-small" id="btn-li-astroscale" onclick="copyPost('li-astroscale')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-astroscale">In-orbit refuelling just got real. Astroscale is gearing up to refuel a U.S. Space Force satellite roughly 22,236 miles above Earth - one of the first commercial missions of its kind.
-
-See them at Space-Comm Expo Europe 2027!
-
-#SpaceComm2027 #Astroscale #SpaceSustainability #SatelliteServicing #NewSpace #SpaceTech
-https://www.space.com/space-exploration/satellites/private-probe-will-refuel-space-force-satellites-high-above-earth-on-landmark-2026-mission</div>
-    <button class="copy-btn-small meta" id="btn-meta-astroscale" onclick="copyPost('meta-astroscale')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -160,14 +99,6 @@ Proud to have BAE Systems exhibiting at Space-Comm Expo Europe 2027.
 
 https://spacenews.com/bae-systems-introduces-ascent-spacecraft-to-support-space-superiority-and-exploration/</div>
     <button class="copy-btn-small" id="btn-li-bae-systems" onclick="copyPost('li-bae-systems')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-bae-systems">Meet Ascent: BAE Systems' new spacecraft built to manoeuvre, refuel, and even deliver cargo to the Moon.
-
-See them at Space-Comm Expo Europe 2027!
-
-#SpaceComm2027 #BAESystems #SpaceTech #SpaceInnovation #Moon #NewSpace
-https://spacenews.com/bae-systems-introduces-ascent-spacecraft-to-support-space-superiority-and-exploration/</div>
-    <button class="copy-btn-small meta" id="btn-meta-bae-systems" onclick="copyPost('meta-bae-systems')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -187,14 +118,6 @@ Proud to have Viasat exhibiting at Space-Comm Expo Europe 2027.
 
 https://www.globenewswire.com/news-release/2026/08/17/3346048/0/en/viasat-selects-rocket-lab-to-build-geo-satellite-for-u-s-space-force-s-protected-tactical-satcom-global-program.html</div>
     <button class="copy-btn-small" id="btn-li-viasat" onclick="copyPost('li-viasat')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-viasat">Viasat has tapped Rocket Lab to build a new GEO satellite bus for a major U.S. satellite communications programme.
-
-See them at Space-Comm Expo Europe 2027!
-
-#SpaceComm2027 #Viasat #SatCom #SpaceTech #Satellites #NewSpace
-https://www.globenewswire.com/news-release/2026/08/17/3346048/0/en/viasat-selects-rocket-lab-to-build-geo-satellite-for-u-s-space-force-s-protected-tactical-satcom-global-program.html</div>
-    <button class="copy-btn-small meta" id="btn-meta-viasat" onclick="copyPost('meta-viasat')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -214,14 +137,6 @@ Proud to have Skyrora exhibiting at Space-Comm Expo Europe 2027.
 
 https://spacenews.com/skyrora-gets-uk-launch-license-as-first-flight-likely-slips-to-2026/</div>
     <button class="copy-btn-small" id="btn-li-skyrora" onclick="copyPost('li-skyrora')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-skyrora">The UK's first licensed vertical rocket launch is closer than ever, and Skyrora is leading the charge from Shetland.
-
-See them at Space-Comm Expo Europe 2027 🚀
-
-#SpaceComm2027 #Skyrora #UKSpace #RocketLaunch #SpaceTech #Scotland
-https://spacenews.com/skyrora-gets-uk-launch-license-as-first-flight-likely-slips-to-2026/</div>
-    <button class="copy-btn-small meta" id="btn-meta-skyrora" onclick="copyPost('meta-skyrora')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -241,14 +156,6 @@ Proud to have GMV exhibiting at Space-Comm Expo Europe 2027.
 
 https://www.gmv.com/en/communication/press-room/press-releases/space/spanish-air-space-force-gmv-agree-install-satellite</div>
     <button class="copy-btn-small" id="btn-li-gmv" onclick="copyPost('li-gmv')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-gmv">GMV is installing a new satellite tracking antenna for the Spanish Air and Space Force, boosting national space surveillance capability.
-
-See them at Space-Comm Expo Europe 2027!
-
-#SpaceComm2027 #GMV #SpaceTech #GroundSegment #Spain #NewSpace
-https://www.gmv.com/en/communication/press-room/press-releases/space/spanish-air-space-force-gmv-agree-install-satellite</div>
-    <button class="copy-btn-small meta" id="btn-meta-gmv" onclick="copyPost('meta-gmv')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -268,14 +175,6 @@ Proud to have Open Cosmos exhibiting at Space-Comm Expo Europe 2027.
 
 https://www.advanced-television.com/2026/05/12/open-cosmos-builds-new-eo-satellites/</div>
     <button class="copy-btn-small" id="btn-li-open-cosmos" onclick="copyPost('li-open-cosmos')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-open-cosmos">Eight new Earth observation satellites, one mission: helping Europe spot climate disasters faster. That's Open Cosmos.
-
-See them at Space-Comm Expo Europe 2027 🚀
-
-#SpaceComm2027 #OpenCosmos #EarthObservation #ClimateTech #SpaceTech #NewSpace
-https://www.advanced-television.com/2026/05/12/open-cosmos-builds-new-eo-satellites/</div>
-    <button class="copy-btn-small meta" id="btn-meta-open-cosmos" onclick="copyPost('meta-open-cosmos')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -295,14 +194,6 @@ Proud to have Seraphim Space exhibiting at Space-Comm Expo Europe 2027.
 
 https://seraphim.vc/news/seraphim-space-10-hottest-satellite-companies-2026/</div>
     <button class="copy-btn-small" id="btn-li-seraphim-space" onclick="copyPost('li-seraphim-space')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-seraphim-space">Seraphim Space just made Via Satellite's "10 Hottest Companies in Satellite for 2026" list. Well earned.
-
-See them at Space-Comm Expo Europe 2027!
-
-#SpaceComm2027 #SeraphimSpace #SpaceVC #SpaceTech #NewSpace #Investment
-https://seraphim.vc/news/seraphim-space-10-hottest-satellite-companies-2026/</div>
-    <button class="copy-btn-small meta" id="btn-meta-seraphim-space" onclick="copyPost('meta-seraphim-space')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -322,14 +213,6 @@ Proud to have AAC Clyde Space exhibiting at Space-Comm Expo Europe 2027.
 
 https://www.investing.com/news/transcripts/earnings-call-transcript-aac-clyde-space-posts-strong-q2-2026-growth-93CH-4856997</div>
     <button class="copy-btn-small" id="btn-li-aac-clyde-space" onclick="copyPost('li-aac-clyde-space')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-aac-clyde-space">AAC Clyde Space posted ~51% sales growth and its first positive EBITDA quarter. Small satellites, big momentum.
-
-See them at Space-Comm Expo Europe 2027 🚀
-
-#SpaceComm2027 #AACClydeSpace #SmallSats #SpaceTech #NewSpace #Growth
-https://www.investing.com/news/transcripts/earnings-call-transcript-aac-clyde-space-posts-strong-q2-2026-growth-93CH-4856997</div>
-    <button class="copy-btn-small meta" id="btn-meta-aac-clyde-space" onclick="copyPost('meta-aac-clyde-space')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -349,14 +232,6 @@ Proud to have OHB SE exhibiting at Space-Comm Expo Europe 2027.
 
 https://satnews.com/2026/03/23/ohb-se-exceeds-profitability-targets-with-record-e3-2-billion-backlog/</div>
     <button class="copy-btn-small" id="btn-li-ohb-se" onclick="copyPost('li-ohb-se')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-ohb-se">OHB SE posted 30%+ EBITDA growth in H1 2026, powered by a EUR 248m ESA weather satellite contract.
-
-See them at Space-Comm Expo Europe 2027!
-
-#SpaceComm2027 #OHBSE #SpaceTech #Germany #Satellites #EarthObservation
-https://satnews.com/2026/03/23/ohb-se-exceeds-profitability-targets-with-record-e3-2-billion-backlog/</div>
-    <button class="copy-btn-small meta" id="btn-meta-ohb-se" onclick="copyPost('meta-ohb-se')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -376,14 +251,6 @@ Proud to have EnduroSat exhibiting at Space-Comm Expo Europe 2027.
 
 https://www.endurosat.com/news/endurosat-has-passed-100-satellites-deployed-to-orbit/</div>
     <button class="copy-btn-small" id="btn-li-endurosat" onclick="copyPost('li-endurosat')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-endurosat">100+ satellites and counting. EnduroSat just crossed a major orbital milestone via SpaceX's Transporter-17 mission.
-
-See them at Space-Comm Expo Europe 2027 🚀
-
-#SpaceComm2027 #EnduroSat #SmallSats #SpaceTech #NewSpace #Milestone
-https://www.endurosat.com/news/endurosat-has-passed-100-satellites-deployed-to-orbit/</div>
-    <button class="copy-btn-small meta" id="btn-meta-endurosat" onclick="copyPost('meta-endurosat')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -403,14 +270,6 @@ Proud to have Teledyne exhibiting at Space-Comm Expo Europe 2027.
 
 https://www.stocktitan.net/news/TDY/teledyne-strengthens-commitment-to-the-space-wwgp68v9s5bj.html</div>
     <button class="copy-btn-small" id="btn-li-teledyne" onclick="copyPost('li-teledyne')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-teledyne">Teledyne has launched a dedicated Teledyne Space division and landed a new contract building detectors for the Lazuli Space Observatory.
-
-See them at Space-Comm Expo Europe 2027!
-
-#SpaceComm2027 #Teledyne #SpaceScience #SpaceTech #Instrumentation #NewSpace
-https://www.stocktitan.net/news/TDY/teledyne-strengthens-commitment-to-the-space-wwgp68v9s5bj.html</div>
-    <button class="copy-btn-small meta" id="btn-meta-teledyne" onclick="copyPost('meta-teledyne')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -430,14 +289,6 @@ Proud to have Filtronic exhibiting at Space-Comm Expo Europe 2027.
 
 https://filtronic.com/news-events/news/filtronic-secures-further-order-strengthening-strategic-partnership-with-spacex-for-starlink/</div>
     <button class="copy-btn-small" id="btn-li-filtronic" onclick="copyPost('li-filtronic')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-filtronic">Filtronic just landed its biggest-ever order - approximately £47.3m - supplying power amplifiers for the Starlink constellation.
-
-See them at Space-Comm Expo Europe 2027 🚀
-
-#SpaceComm2027 #Filtronic #Starlink #UKSpace #SpaceTech #RFEngineering
-https://filtronic.com/news-events/news/filtronic-secures-further-order-strengthening-strategic-partnership-with-spacex-for-starlink/</div>
-    <button class="copy-btn-small meta" id="btn-meta-filtronic" onclick="copyPost('meta-filtronic')">Copy Meta post</button>
   </div>
 
   <div class="card">
@@ -457,14 +308,6 @@ Proud to have Nammo exhibiting at Space-Comm Expo Europe 2027.
 
 https://www.nammo.com/story/nammo-to-develop-rocket-motor-for-heracles-moon-mission/</div>
     <button class="copy-btn-small" id="btn-li-nammo" onclick="copyPost('li-nammo')">Copy LinkedIn post</button>
-    <div class="platform-label meta">&#128247; Meta / Instagram Post</div>
-    <div class="post-draft meta" id="meta-nammo">Nammo is building a rocket motor for HERACLES, the ESA/JAXA/CSA mission set to bring lunar samples back to Earth.
-
-See them at Space-Comm Expo Europe 2027!
-
-#SpaceComm2027 #Nammo #HERACLES #LunarExploration #SpaceTech #Propulsion
-https://www.nammo.com/story/nammo-to-develop-rocket-motor-for-heracles-moon-mission/</div>
-    <button class="copy-btn-small meta" id="btn-meta-nammo" onclick="copyPost('meta-nammo')">Copy Meta post</button>
   </div>
 </div>
 
@@ -473,15 +316,6 @@ https://www.nammo.com/story/nammo-to-develop-rocket-motor-for-heracles-moon-miss
 </div>
 
 <script>
-function copyText(id) {
-  const el = document.getElementById(id);
-  navigator.clipboard.writeText(el.innerText).then(() => {
-    const btn = el.nextElementSibling;
-    const orig = btn.textContent;
-    btn.textContent = 'Copied!';
-    setTimeout(() => btn.textContent = orig, 1500);
-  });
-}
 function copyPost(id) {
   const el = document.getElementById(id);
   navigator.clipboard.writeText(el.innerText).then(() => {
