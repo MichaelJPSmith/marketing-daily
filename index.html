@@ -256,6 +256,8 @@ function copyPost(id) {
 function copyImage(cardId, btnId) {
   const btn = document.getElementById(btnId);
   const card = document.getElementById(cardId);
+  const inner = card.closest('.social-card-inner');
+  const prevTransform = inner ? inner.style.transform : null;
   const orig = btn.textContent;
   btn.textContent = 'Rendering...';
   if (typeof html2canvas === 'undefined') {
@@ -263,7 +265,10 @@ function copyImage(cardId, btnId) {
     setTimeout(() => btn.textContent = orig, 2500);
     return;
   }
+  // Render at full native 1080x1080 resolution regardless of the on-screen preview scale
+  if (inner) inner.style.transform = 'scale(1)';
   html2canvas(card, { useCORS: true, scale: 1, backgroundColor: null }).then(canvas => {
+    if (inner) inner.style.transform = prevTransform;
     canvas.toBlob(blob => {
       if (!blob) { btn.textContent = 'Right-click image to copy'; setTimeout(() => btn.textContent = orig, 2500); return; }
       navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]).then(() => {
@@ -275,6 +280,7 @@ function copyImage(cardId, btnId) {
       });
     });
   }).catch(() => {
+    if (inner) inner.style.transform = prevTransform;
     btn.textContent = 'Right-click image to copy';
     setTimeout(() => btn.textContent = orig, 2500);
   });
